@@ -1,0 +1,12 @@
+{% extends 'core/base.html' %}
+
+{% block titulo %}
+    <h1>Comercio Electrodomesticos</h1>
+{% endblock titulo %}
+
+{% block content %}
+    <div>
+        <a href="{% url 'Secciones:index' %}">Ver productos y categorias</a>
+        <a href="{% url 'Secciones:form' %}">Crear productos</a>
+    </div>
+{% endblock content %}

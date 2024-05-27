@@ -1,0 +1,19 @@
+{% extends 'core/base.html' %}
+
+{% block titulo %}
+    Productos y categorias.
+{% endblock titulo %}
+
+{% block content %}
+    {% for i in Producto_categoria %}
+        <h1>{{ i.nombre }}</h1>
+        <ul>
+            <li>{{ i.precio }}</li>
+            <li>{{ i.categoria }}</li>
+            <li>{{ i.codigo_de_barras }}</li>
+        </ul>
+    {% endfor %}
+    <div>
+        <a href="{% url 'core:index' %}">Volver al inicio</a>
+    </div>
+{% endblock content %}
